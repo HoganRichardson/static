@@ -11,5 +11,5 @@ config.vm.synced_folder "${sharedir}", "/vagrant_data"
 #  end
 
 # Provisioning Script
- config.vm.provision "shell", path: "https://raw.githubusercontent.com/HoganRichardson/static/master/scripts/default_ubuntu.sh sift", privileged: true
+ config.vm.provision "shell", path: "https://raw.githubusercontent.com/HoganRichardson/static/master/scripts/default_ubuntu.sh", args: "sift", privileged: true
 end
