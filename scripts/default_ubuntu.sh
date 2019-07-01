@@ -6,5 +6,5 @@
 
 # Set Hostname
 echo "[i:DEFAULT] Setting hostname..."
-echo "127.0.0.1    $1" > /etc/hostname || exit 1
+echo "$1" > /etc/hostname || exit 1
 
