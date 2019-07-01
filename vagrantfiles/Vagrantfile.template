@@ -1,0 +1,15 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/bionic64" # Ubuntu 64bit
+  config.vm.network "private_network", ip:"${IP}" # Some local IP for this host
+
+# SHARED FOLDER 
+config.vm.synced_folder "${sharedir}", "/vagrant_data" 
+
+# UNCOMMENT THIS IF YOU WANT A GRAPHICAL INTERFACE
+#  config.vm.provider "virtualbox" do |vb|
+#     vb.gui = true
+#  end
+
+# Provisioning Script
+  config.vm.provision "shell", path: "https://raw.githubusercontent.com/HoganRichardson/static/master/scripts/default_ubuntu.sh ${hostname}", privileged: false
+end
