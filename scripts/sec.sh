@@ -7,9 +7,8 @@ sudo pip install --upgrade pip && \
 sudo pip install --upgrade pwntools
 
 echo "Installing pwndbg..."
+cd && \
 git clone https://github.com/pwndbg/pwndbg && \
 cd pwndbg && \
 ./setup.sh 
 
-cd .. && \ 
-rm -r pwndbg
