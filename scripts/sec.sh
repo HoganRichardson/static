@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 echo "Installing pwntools..."
 sudo apt-get update && \
