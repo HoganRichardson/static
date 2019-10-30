@@ -9,4 +9,4 @@ echo "[i:DEFAULT] Setting hostname..."
 echo "$1" > /etc/hostname || exit 1
 
 # Install useful defaults
-apt install build-essential
+apt install -y build-essential
