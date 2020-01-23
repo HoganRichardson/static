@@ -40,4 +40,5 @@ rm $VM/$hostname/Vagrantfile.template #cleanup
 # Launching VM
 echo "Attempting to launch VM..."
 cd $VM/$hostname
-vagrant up
+echo "Stopped"
+#vagrant up
