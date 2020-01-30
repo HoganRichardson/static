@@ -8,8 +8,8 @@
 echo "[i:DEFAULT] Setting hostname..."
 echo "$1" > /etc/hostname || exit 1
 
-# Run provisioning script
-SCRIPT="ubuntu.sh"
+# Install useful defaults
+SCRIPT="debian.sh"
 wget https://raw.githubusercontent.com/HoganRichardson/static/master/scripts/provisioning/$SCRIPT && \
 	chmod +x $SCRIPT && \
 	./$SCRIPT && \
