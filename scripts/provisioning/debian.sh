@@ -8,6 +8,7 @@ apt install -y git
 apt install -y build-essential
 apt install -y curl
 apt install -y dnsutils
+apt install -y rsync
 
 # Install a _sane_ version of vi
 apt install -y vim
