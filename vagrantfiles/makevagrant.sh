@@ -27,9 +27,9 @@ else
 	echo "[i]  No DIR Specified, Using default directory: $VM"
 fi
 
-mkdir $VM/$hostname || exit 1
+mkdir -p $VM/$hostname || exit 1
 sharedir=$VM/$hostname/share
-mkdir $sharedir
+mkdir -p $sharedir
 
 # Initialise Vagrantfile
 echo "Initialising Vagrantfile"
@@ -40,5 +40,5 @@ rm $VM/$hostname/Vagrantfile.template #cleanup
 # Launching VM
 echo "Attempting to launch VM..."
 cd $VM/$hostname
-echo "Stopped"
-#vagrant up
+#echo "Stopped"
+vagrant up
