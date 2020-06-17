@@ -23,4 +23,7 @@ echo "server {
 echo "   -- Enabling Site"
 ln -s /etc/nginx/sites-available/uwsgi_app /etc/nginx/sites-enabled
 
+echo "   -- Removing default site"
+rm /etc/nginx/sites-enabled/default
+
 echo "   NGINX Complete"
