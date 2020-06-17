@@ -10,7 +10,7 @@ echo "NGINX App Generator"
 echo "   -- Creating App with hostname $hostname"
 echo "   -- Using UWSGI path $app_path/myapp.sock"
 
-sudo echo "server {
+echo "server {
 	listen 80;
 	server_name $hostname;
 	
@@ -21,6 +21,6 @@ sudo echo "server {
 }" > /etc/nginx/sites-available/uwsgi_app
 
 echo "   -- Enabling Site"
-sudo ln -s /etc/nginx/sites-available/uwsgi_app /etc/nginx/sites-enabled
+ln -s /etc/nginx/sites-available/uwsgi_app /etc/nginx/sites-enabled
 
 echo "   NGINX Complete"
