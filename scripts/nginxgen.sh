@@ -12,7 +12,7 @@ echo "   -- Using UWSGI path $app_path/myapp.sock"
 
 echo "server {
 	listen 80;
-	server_name $hostname;
+	server_name localhost,$hostname;
 	
 	location / {
 		include 	uwsgi_params;
