@@ -16,7 +16,7 @@ echo "server {
 	
 	location / {
 		include 	uwsgi_params;
-		uwsgi_pass	unix:$app_path/myapp.sock;
+		uwsgi_pass	unix:$app_path/web.sock;
 	}
 }" > /etc/nginx/sites-available/uwsgi_app
 
