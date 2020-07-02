@@ -22,8 +22,8 @@ server {
     listen 443 ssl http2;
     listen [::]:443 ssl http2;
     # Uncomment these lines if certificate is in place
-    #ssl_certificate /etc/ssl/home.hoganrichardson.com/fullchain.pem;
-    #ssl_certificate_key /etc/ssl/home.hoganrichardson.com/privkey.pem;
+    #ssl_certificate /etc/ssl/$hostname/fullchain.pem;
+    #ssl_certificate_key /etc/ssl/$hostname/privkey.pem;
 
     location / {
         include uwsgi_params;
